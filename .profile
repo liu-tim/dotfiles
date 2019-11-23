@@ -1,31 +1,12 @@
-# ~/.profile: executed by the command interpreter for login shells.
-# This file is not read by bash(1), if ~/.bash_profile or ~/.bash_login
-# exists.
-# see /usr/share/doc/bash/examples/startup-files for examples.
-# the files are located in the bash-doc package.
-
-# the default umask is set in /etc/profile; for setting the umask
-# for ssh logins, install and configure the libpam-umask package.
-#umask 022
-
-# if running bash
-if [ -n "$BASH_VERSION" ]; then
-    # include .bashrc if it exists
-    if [ -f "$HOME/.bashrc" ]; then
-	. "$HOME/.bashrc"
-    fi
-fi
-# set PATH so it includes user's private bin directories
-PATH="$HOME/bin:$HOME/.local/bin:$PATH"
-# Ubuntu make installation of Ubuntu Make binary symlink
-PATH=/home/tim/.local/share/umake/bin:$PATH
-
-
-### Added by the Heroku Toolbelt
-export PATH="/usr/local/heroku/bin:$PATH"
-
-
-# added by Anaconda3 installer
-export PATH="/home/tim/anaconda3/bin:$PATH"
-
-#source ~/.profile
+# Add Homebrew's executable directory to the front of the PATH
+  2 export PATH=/usr/local/bin:$PATH
+  3 export NVM_DIR="$HOME/.nvm"
+  4 export PATH=$PATH:/usr/local/go/bin::$GOPATH/bin
+  5 export GOPATH=~/dev/stackadapt/go
+  6 export GONOPROXY="github.com/StackAdapt"
+  7 export GONOSUMDB="github.com/StackAdapt"
+  8
+  9   [ -s "/usr/local/opt/nvm/nvm.sh" ] && . "/usr/local/opt/nvm/nvm.sh"  # This loads nvm
+ 10   [ -s "/usr/local/opt/nvm/etc/bash_completion" ] && . "/usr/local/opt/nvm/etc/bash_completion"  # This loads nvm     bash_completion
+ 11 export PATH="$HOME/.rbenv/bin:$PATH"
+ 12 eval "$(rbenv init -)"
